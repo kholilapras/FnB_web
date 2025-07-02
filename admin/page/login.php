@@ -127,7 +127,7 @@
     }
 
     body {
-        background-image: url('assets/img/background.jpg');
+        background-image: url('assets/img/bg.jpg');
         background-color: #404040;
         background-size: cover;
         background-repeat: no-repeat;
