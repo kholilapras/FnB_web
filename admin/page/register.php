@@ -33,18 +33,10 @@
                 <label for="password" class="floating">Password</label>
             </div>
 
-            <div class="form-group">
-                <select name="role" id="role" class="form-input" required style="width:100%;">
-                    <option value="">-- Pilih Role --</option>
-                    <option value="Kasir">Kasir</option>
-                    <option value="Super Admin">Super Admin</option>
-                </select>
-                <label for="role" class="floating">Role</label>
-            </div>
+            <!-- Bagian role telah dihapus -->
 
             <button type="submit" name="submit" class="form-button">Register</button>
-            <br>
-            <br>
+            <br><br>
             <div class="opsi">
                 Sudah Memiliki Akun? <a href="page.php?page=login">Login</a>
             </div>
@@ -63,7 +55,6 @@
     }
 
     :root {
-        /* ===== Colors ===== */
         --blue_dark: #1450A0;
         --blue_light: #2878F0;
         --gold: #F0A014;
@@ -110,8 +101,7 @@
         width: 100%;
     }
 
-    input,
-    select {
+    input {
         width: 100%;
         padding: 10px;
         backdrop-filter: blur(10px);
@@ -124,9 +114,7 @@
     }
 
     input:focus,
-    input:not(:placeholder-shown),
-    select:focus,
-    select:not([value=""]) {
+    input:not(:placeholder-shown) {
         padding-top: 20px;
         padding-bottom: 5px;
         background-color: transparent;
@@ -135,9 +123,7 @@
     }
 
     input:focus+.floating,
-    input:not(:placeholder-shown)+.floating,
-    select:focus+.floating,
-    select:not([value=""])+.floating {
+    input:not(:placeholder-shown)+.floating {
         top: 10px;
         left: 10px;
         font-size: 12px;
@@ -177,13 +163,6 @@
     .opsi a {
         text-decoration: none;
         color: var(--gold);
-
-    }
-
-    option {
-        background-color: var(--black2);
-        font-size: 1rem;
-        width: 100%;
     }
 </style>
 
