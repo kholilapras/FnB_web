@@ -7,5 +7,8 @@
 
 ![3e3a34ad-48d9-411d-aa88-897892acb6b8](https://github.com/user-attachments/assets/0f52da18-ac60-499b-8f3c-1b2c3c1f4ffd)
 
-- Halaman Admin
+![7](https://github.com/user-attachments/assets/fd4e477e-a415-44c6-8217-6fc86110d3c7)
+
+![8](https://github.com/user-attachments/assets/8aa96639-420d-4f1c-bd33-d29e87cda338)
+
 ![9](https://github.com/user-attachments/assets/2324cadf-0c3f-4e7a-9342-5a29adc3c3d0)
