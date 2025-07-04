@@ -1,11 +1,3 @@
-<?php
-if (isset($_SESSION['role'])) {
-    $role = $_SESSION['role'];
-} else {
-    $role = 'Kasir'; // atau lakukan redirection ke halaman login
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 

@@ -14,8 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = mysqli_real_escape_string($koneksi, $_POST['email']);
         $password = mysqli_real_escape_string($koneksi, $_POST['password']);
 
-        // Query untuk mengambil data pengguna berdasarkan email
-        $sql = "SELECT id, nama_lengkap, no_telp, email, role, password, created_at FROM akun WHERE email = ?";
+        // Query untuk mengambil data pengguna berdasarkan email (tanpa kolom role)
+        $sql = "SELECT id, nama_lengkap, no_telp, email, password, created_at FROM akun WHERE email = ?";
         $stmt = mysqli_stmt_init($koneksi);
 
         // Persiapkan statement SQL
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Periksa apakah ada pengguna dengan email tersebut
             if (mysqli_stmt_num_rows($stmt) == 1) {
-                mysqli_stmt_bind_result($stmt, $id, $nama_lengkap, $no_telp, $email, $role, $hashed_password, $created_at);
+                mysqli_stmt_bind_result($stmt, $id, $nama_lengkap, $no_telp, $email, $hashed_password, $created_at);
                 mysqli_stmt_fetch($stmt);
 
                 // Verifikasi password
@@ -36,9 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION['nama_lengkap'] = $nama_lengkap;
                     $_SESSION['no_telp'] = $no_telp;
                     $_SESSION['email'] = $email;
-                    $_SESSION['role'] = $role;
 
-                    header("Location: page.php?page=beranda");
+                    header("Location: page.php?page=info-web");
                     exit();
                 } else {
                     // Jika password salah

@@ -1,12 +1,6 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'Super Admin') {
-    header('Location: ../index.php');
-    exit();
-}
-
-
 $id = 1;
 $sql = "SELECT * FROM waktu_operasional WHERE id = $id";
 $result = $koneksi->query($sql);

@@ -1,7 +1,6 @@
 <div class="header">
     <h4><?php echo htmlspecialchars($_SESSION['nama_lengkap']); ?></h4>
-    <p><?php echo htmlspecialchars($_SESSION['email']); ?> |
-        <?php echo htmlspecialchars($_SESSION['role']); ?></p>
+    <p><?php echo htmlspecialchars($_SESSION['email']); ?>
 </div>
 <div class="waktuu">
     <div id="clock"></div>

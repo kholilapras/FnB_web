@@ -1,12 +1,6 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['role'])) {
-    header('Location: index.php');
-    exit();
-}
-
-
 include 'page/template/sidebar.php';
 ?>
 
@@ -31,11 +25,7 @@ include 'page/template/sidebar.php';
                         <th>Nama Lengkap</th>
                         <th>No. Telp</th>
                         <th>Email</th>
-                        <th>role</th>
                         <th>Waktu Registrasi</th>
-                        <?php if ($role == 'Super Admin') : ?>
-                            <th>Hapus Akun</th>
-                        <?php endif; ?>
                     </tr>
                     <?php
                     $data = mysqli_query($koneksi, "SELECT * FROM akun ORDER BY id DESC");
@@ -47,14 +37,7 @@ include 'page/template/sidebar.php';
                             <td><?php echo $r['nama_lengkap']; ?></td>
                             <td><?php echo $r['no_telp']; ?></td>
                             <td><?php echo $r['email']; ?></td>
-                            <td><?php echo $r['role']; ?></td>
                             <td><?php echo $r['created_at']; ?></td>
-                            <td><?php if ($role == 'Super Admin') : ?>
-                                    <a href="action.php?action=hapus-akun&id=<?php echo $r['id']; ?>">
-                                        <button style="background-color: var(--red);">Hapus</button>
-                                    </a>
-                                <?php endif; ?>
-                            </td>
                         </tr>
                     <?php
                         $no++;
